@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti ❤</title>
+  <style>
+    body {
+      background: #fdf6f6;
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #e91e63;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    .frase {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #444;
+      font-style: italic;
+    }
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Para mi cuchurrumin 💕</h1>
+
+  <div class="gallery">
+    <img src="img1.jpg" alt="imagen 1" onclick="mostrarFrase('Eres lo mejor que me ha pasado 💖')">
+    <img src="img2.jpg" alt="imagen 2" onclick="mostrarFrase('Me haces feliz todos los días 🌹')">
+    <img src="img3.jpg" alt="imagen 3" onclick="mostrarFrase('Contigo todo es más bonito ✨')">
+    <img src="img4.jpg" alt="imagen 4" onclick="mostrarFrase('Mi vida es más linda desde que estás tú ❤')">
+  </div>
+
+  <div class="frase" id="frase"></div>
+
+  <!-- Música Turning Page -->
+ <audio autoplay loop>
+  <source src="Turning Page(MP3_160K).mp3" type="audio/mpeg">
+</audio>
+
+  <script>
+    function mostrarFrase(texto) {
+      document.getElementById('frase').textContent = texto;
+    }
+  </script>
+</body>
+</html>
